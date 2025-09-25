@@ -18,7 +18,6 @@ export default function UserProfile() {
 
   const [userData, setUserData] = useState(null);
   const [userPosts, setUserPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   // Modal states
