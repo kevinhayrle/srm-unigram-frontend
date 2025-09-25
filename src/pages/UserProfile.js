@@ -23,7 +23,7 @@ export default function UserProfile() {
   // Modal states
   
   const [showUniPostModal, setShowUniPostModal] = useState(false);
-
+const [loading, setLoading] = useState(true);
   const currentUserId = localStorage.getItem("userId");
   const isOwnProfile = userId === currentUserId;
   const verifiedUsers = ["ks6867", "yb0902"]
