@@ -25,7 +25,6 @@ export default function Feed() {
 
   // Notifications
   const [notifications, setNotifications] = useState([]);
-  const [showNotifications, setShowNotifications] = useState(false);
   const [hasUnread, setHasUnread] = useState(false);
 
   // UI states

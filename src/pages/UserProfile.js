@@ -22,7 +22,7 @@ export default function UserProfile() {
   const [error, setError] = useState("");
 
   // Modal states
-  const [showPostMenu, setShowPostMenu] = useState(false);
+  
   const [showUniPostModal, setShowUniPostModal] = useState(false);
 
   const currentUserId = localStorage.getItem("userId");
