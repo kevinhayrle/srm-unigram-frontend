@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Pages.css";
 import srmLogo from "../assets/masterlogo.png";
 
-const API_URL = "http://localhost:5000/api"; // change to your backend URL when deployed
+const API_URL = "https://srm-unigram-backend.onrender.com/api"; // change to your backend URL when deployed
 
 const Signup = () => {
   const navigate = useNavigate();

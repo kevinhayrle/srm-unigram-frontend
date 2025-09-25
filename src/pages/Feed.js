@@ -47,7 +47,7 @@ export default function Feed() {
 
       try {
         // Fetch posts
-        const postRes = await fetch("http://localhost:5000/api/posts", {
+        const postRes = await fetch("https://srm-unigram-backend.onrender.com/api/posts", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const postResult = await postRes.json();
@@ -70,7 +70,7 @@ export default function Feed() {
 
         // Fetch notifications
         const notifRes = await fetch(
-          `http://localhost:5000/api/notifications/${currentUserId}`,
+          `https://srm-unigram-backend.onrender.com/api/notifications/${currentUserId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -110,7 +110,7 @@ export default function Feed() {
   if (!recipient || recipient === currentUserId) return; // do not notify self
   try {
     const token = localStorage.getItem("token");
-    await fetch("http://localhost:5000/api/notifications", {
+    await fetch("https://srm-unigram-backend.onrender.com/api/notifications", {
       method: "POST",
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
       body: JSON.stringify({

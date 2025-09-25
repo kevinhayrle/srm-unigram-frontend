@@ -12,7 +12,7 @@ const Login = () => {
   const SRM_DOMAIN = "@srmist.edu.in";
 
   // Use this for localhost testing; replace with Render URL when deployed
-  const API_BASE = "http://localhost:5000/api/auth";
+  const API_BASE = "https://srm-unigram-backend.onrender.com/api/auth";
 
   const handleLogin = async () => {
     const email = emailPrefix + SRM_DOMAIN;

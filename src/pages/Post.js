@@ -91,7 +91,7 @@ const Post = ({ post, id }) => { // added id prop
     // Emit notification to post owner if commenter is not the owner
 const postOwnerId = typeof userId === "string" ? userId : userId?._id;
 if (postOwnerId && postOwnerId.toString() !== currentUserId) {
-  await fetch(`http://localhost:5000/api/notifications`, {
+  await fetch(`https://srm-unigram-backend.onrender.com/api/notifications`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
     body: JSON.stringify({

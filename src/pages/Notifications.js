@@ -22,7 +22,7 @@ export default function Notifications() {
 
       setLoading(true); // Set loading only when fetch starts
       try {
-        const res = await fetch(`http://localhost:5000/api/notifications/${currentUserId}`, {
+        const res = await fetch(`https://srm-unigram-backend.onrender.com/api/notifications/${currentUserId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -43,7 +43,7 @@ export default function Notifications() {
 
     const markAllAsRead = async () => {
       try {
-        await fetch(`http://localhost:5000/api/notifications/mark-seen/${currentUserId}`, {
+        await fetch(`https://srm-unigram-backend.onrender.com/api/notifications/mark-seen/${currentUserId}`, {
           method: "POST",
           headers: { Authorization: `Bearer ${token}` },
         });

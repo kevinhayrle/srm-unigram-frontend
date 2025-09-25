@@ -36,7 +36,7 @@ export default function EditProfile() {
       }
 
       try {
-        const res = await axios.get(`http://localhost:5000/api/users/${userId}`, {
+        const res = await axios.get(`https://srm-unigram-backend.onrender.com/api/users/${userId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUserData({
@@ -99,7 +99,7 @@ export default function EditProfile() {
       }
 
       // Send updated data to backend
-      await axios.put(`http://localhost:5000/api/users/${userId}`, updatedData, {
+      await axios.put(`hhttps://srm-unigram-backend.onrender.com/api/users/${userId}`, updatedData, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
