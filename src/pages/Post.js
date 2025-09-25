@@ -38,7 +38,7 @@ const Post = ({ post, id }) => { // added id prop
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/users/${userId}`, {
+        const res = await fetch(`https://srm-unigram-backend.onrender.com/api/users/${userId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.ok) {
@@ -56,7 +56,7 @@ const Post = ({ post, id }) => { // added id prop
   // ------------------ HANDLE LIKE ------------------
   const handleLike = async () => {
   try {
-    const response = await fetch(`http://localhost:5000/api/posts/${_id}/like`, {
+    const response = await fetch(`https://srm-unigram-backend.onrender.com/api/posts/${_id}/like`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
     });
@@ -77,7 +77,7 @@ const Post = ({ post, id }) => { // added id prop
     if (newComment.trim() === '') return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/posts/${_id}/comment`, {
+      const response = await fetch(`https://srm-unigram-backend.onrender.com/api/posts/${_id}/comment`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify({ text: newComment }),
