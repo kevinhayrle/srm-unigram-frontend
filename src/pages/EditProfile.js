@@ -108,7 +108,7 @@ export default function EditProfile() {
       console.error("Failed to update profile:", err.response || err.message);
       alert("Failed to update profile. Try again.");
     } finally {
-      setSaving(false); // re-enable button
+      setSaving(false); // re-enable butt
     }
   };
 
