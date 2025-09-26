@@ -99,7 +99,7 @@ export default function EditProfile() {
       }
 
       // Send updated data to backend
-      await axios.put(`hhttps://srm-unigram-backend.onrender.com/api/users/${userId}`, updatedData, {
+      await axios.put(`https://srm-unigram-backend.onrender.com/api/users/${userId}`, updatedData, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
