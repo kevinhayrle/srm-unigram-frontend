@@ -1,4 +1,4 @@
-// src/pages/Feed.js
+// src/pages/Feed
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Post from "./Post";
