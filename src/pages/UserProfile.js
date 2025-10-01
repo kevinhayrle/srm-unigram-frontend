@@ -47,10 +47,10 @@ const [loading, setLoading] = useState(true);
 
       try {
         const [userRes, postsRes] = await Promise.all([
-          axios.get(`https://srm-unigram-backend.onrender.com/api/users/${userId}`, {
+          axios.get(`http://localhost:5000/api/users/${userId}`, {
             headers: { Authorization: `Bearer ${token}` },
           }),
-          axios.get(`https://srm-unigram-backend.onrender.com/api/posts/user/${userId}`, {
+          axios.get(`http://localhost:5000/api/posts/user/${userId}`, {
             headers: { Authorization: `Bearer ${token}` },
           }),
         ]);

@@ -37,7 +37,7 @@ export default function CreatePost({ onPostCreated }) {
       formData.append("image", imageFile);
       formData.append("caption", caption);
 
-      const response = await fetch("https://srm-unigram-backend.onrender.com/api/posts", {
+      const response = await fetch("http://localhost:5000/api/posts", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Pages.css";
 import srmLogo from "../assets/masterlogo.png";
 
-const API_URL = "https://srm-unigram-backend.onrender.com/api"; // change when backend deployed
+const API_URL = "http://localhost:5000/api"; // change when backend deployed
 
 export default function ForgotPassword() {
   const navigate = useNavigate();
